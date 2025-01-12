@@ -1,11 +1,15 @@
 import Carrossel from '../../componentes/carrossel/carrossel';
+import Slide from '../../componentes/slide/slide';
+import SlideExibeMais from '../../componentes/slideExibeMais/slideExibeMais';
 import './home.css';
 const Home = ()=>{
     return(
         <div className="principal">
-            <h1 style={{color: 'red'}}>oi</h1>
             <div className='carrossel'>
-                <Carrossel></Carrossel>
+                <Slide/>
+                <Carrossel espacoEntreCards={null} quantidadeCardsNaTela={null} loop={false}/>
+                <SlideExibeMais />
+                <Carrossel espacoEntreCards={null} quantidadeCardsNaTela={null} loop={false}/>
             </div>
         </div>
     );

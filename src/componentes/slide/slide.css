@@ -1,0 +1,7 @@
+.baseSlide{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    margin-top: 55px;
+    margin-bottom: -130px;
+}

@@ -1,3 +1,4 @@
+import CarrinhoBotao from '../carrinhoBotao/carrinhoBotao';
 import ModeloBotao from '../modeloBotao/modeloBotao';
 import './barraDeNavegacao.css';
 import { CiSearch } from "react-icons/ci";
@@ -26,6 +27,7 @@ const BarraDeNavegacao = () => {
                     <ModeloBotao to='/contato' texto='Contato' />
                     <ModeloBotao to='/sobre' texto='Sobre' />
                     <ModeloBotao to='/acesso' texto='Entrar' />
+                    <CarrinhoBotao />
                 </div>
             </div>
         </div>
