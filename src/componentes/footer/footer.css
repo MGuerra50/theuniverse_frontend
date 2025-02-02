@@ -1,0 +1,55 @@
+.baseFooter{
+    position: relative;
+    margin-top: 30px;
+    height: auto;
+    width: 100%; /*verificar porque isso gera rolagem horizontal na página*/
+    /* max-width: 100%; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(10, 17, 40, 1);
+    justify-content: center;
+    overflow-x: hidden;
+    color: white;
+    gap: 370px;
+    overflow-x: hidden;
+}
+
+.tituloFooter{
+    margin-top: 50px;
+    font-size: medium;
+    display: flex;
+}
+
+.iconesSociais{
+    width: 25px;
+    height: auto;
+    margin: 10px 10px;
+    transition: 0.25s ease-in-out;
+}
+
+.iconesSociais:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.lista{
+    padding-bottom: 30px;
+}
+
+.itensDaLista{
+    transition: 0.25s ease-in-out;
+}
+
+.itensDaLista:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+#social{
+    justify-content: center;
+}
+
+.links{
+    text-decoration: none;
+    color: white;
+}

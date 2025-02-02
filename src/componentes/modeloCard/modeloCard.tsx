@@ -1,7 +1,14 @@
+import { Link } from 'react-router-dom';
 import './modeloCard.css';
 import Tilt from 'react-parallax-tilt';
 
-const ModeloCard = () => {
+type Props = {
+    children: any;
+    textoDescricao?: string | null
+    link?: string | null
+}
+
+const ModeloCard = ({ children, textoDescricao, link }: Props) => {
     return (
         <Tilt
             tiltMaxAngleX={5}
@@ -10,12 +17,13 @@ const ModeloCard = () => {
         >
             <div className='principalCard'>
                 <div className='estruturaCard'>
-                    <div className='parteInterna'>
-                        <h2>01</h2>
-                        <h3>Card Um</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href='/cardClidado'>Mais Informações</a>
-                    </div>
+                    <Link to={`${link}`} className='linkCard'>
+                        {children}
+                        <div className='parteInterna'>
+                            <h3>{textoDescricao}</h3>
+                            <a href={`/${link !== null ? link : 'undefined'}`}>Ver Mais</a>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </Tilt>

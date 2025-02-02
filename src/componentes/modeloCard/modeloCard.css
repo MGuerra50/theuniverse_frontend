@@ -17,14 +17,12 @@
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: 0.4s ease-in-out;
+    user-select: none;
 }
 
 .estruturaCard:hover{
@@ -32,21 +30,43 @@
     box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
 }
 
+.estruturaCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    user-select: none;
+}
+
+.estruturaCard:hover img {
+    opacity: 1;
+    filter: blur(1px) contrast(115%) brightness(95%);
+}
+
 .parteInterna{
-    padding: 20px;
+    position: absolute;
+    align-content: center;
     text-align: center;
-    transform: translateY(100px);
+    transform: translateY(-110%);
     opacity: 0;
     transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
 }
 
 .parteInterna:hover{
-    transform: translateY(0);
+    text-align: center;
+    justify-content: center;
     opacity: 1;
 }
 
 .parteInterna h2{
     position: absolute;
+    display: flex;
     top: -80px;
     right: 30px;
     font-size: 8em;
@@ -57,18 +77,24 @@
 .parteInterna h3{
     font-size: 1.8em;
     color: #ffffff;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
     z-index: 1;
+    user-select: none;
 }
 
 .parteInterna p {
+    display: flex;
     font-size: 1em;
     color: white;
     font-weight: 300;
 }
 
 .parteInterna a {
+    display: flex;
     position: relative;
-    display: inline-block;
+    right: 0%;
+    justify-self: center;
+    width: 69px;
     padding: 8px 20px;
     margin-top: 15px;
     background: white;
@@ -77,4 +103,21 @@
     border-radius: 20px;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.35s ease-in-out;
+    user-select: none;
+}
+
+.parteInterna a:hover{
+    transform: scale(1.15) translateY(-1px);
+}
+
+.linkCard{
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.linkCard:hover{
+    cursor: pointer;
 }

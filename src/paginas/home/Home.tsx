@@ -1,4 +1,5 @@
 import Carrossel from '../../componentes/carrossel/carrossel';
+import Footer from '../../componentes/footer/footer';
 import Slide from '../../componentes/slide/slide';
 import SlideExibeMais from '../../componentes/slideExibeMais/slideExibeMais';
 import './home.css';
@@ -11,6 +12,7 @@ const Home = ()=>{
                 <SlideExibeMais />
                 <Carrossel espacoEntreCards={null} quantidadeCardsNaTela={null} loop={false}/>
             </div>
+            <Footer/>
         </div>
     );
 }

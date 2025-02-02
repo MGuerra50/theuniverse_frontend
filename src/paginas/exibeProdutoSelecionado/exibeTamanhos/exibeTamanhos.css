@@ -1,0 +1,37 @@
+.botaoTamanhos{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px;
+    border-radius: 7px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: 0.25s ease;
+    user-select: none;
+    padding: 0px 3px;
+}
+
+.botaoTamanhos:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.botaoSelecionado{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px;
+    border-radius: 7px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    user-select: none;
+    padding: 0px 3px;
+}
+
+.botaoSelecionado:hover{
+    cursor: pointer;
+}

@@ -7,7 +7,7 @@ type Props = {
 
 const BotaoAtrativo = ({ textoBotao }: Props) => {
     return (
-        <Link to='/teste'>
+        <Link to='/teste' className='designDoBotao'>
             <div className='estruturaDoBotaoV2'>
                 <div className='estruturaDoBotaoV2Parte2'>
                     <span className='textoBotaoV2'>{textoBotao}</span>
