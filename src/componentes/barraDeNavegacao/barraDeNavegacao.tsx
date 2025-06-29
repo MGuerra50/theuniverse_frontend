@@ -23,10 +23,10 @@ const BarraDeNavegacao = () => {
                     </Link>
                 </div>
                 <div className='linksNavegacao'>
-                    <ModeloBotao to='/categorias' texto='Categorias' />
+                    <ModeloBotao to='/explorar' texto='Explorar' />
                     <ModeloBotao to='/contato' texto='Contato' />
                     <ModeloBotao to='/sobre' texto='Sobre' />
-                    <ModeloBotao to='/acesso' texto='Entrar' />
+                    {/* <ModeloBotao to='/acesso' texto='Entrar' /> */}
                     <CarrinhoBotao />
                 </div>
             </div>

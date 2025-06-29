@@ -15,10 +15,10 @@ const SlideExibeMais = () => {
                     <img src='teste.jpg' alt={'teste'} className='imagem' />
                 </div>
                 <div className='textosDescricao'>
-                    <h1 className='headLineDestaque'>Se Sinta Poderosa, Todos os Dias!</h1>
-                    <h3 className='subHeadLineDestaque'>Realce sua confiança e atraia olhares por onde passar</h3>
-                    <p className='descricaoDestaque'>Descubra o poder de uma calça que modela suas curvas sem esforço, trazendo conforto e estilo para qualquer momento do seu dia. Com um design atemporal e moderno, você nunca mais vai querer usar outra peça. Afinal, se sentir bem é o segredo para conquistar o mundo!</p>
-                    <BotaoAtrativo textoBotao='teste' />
+                    <h1 className='headLineDestaque'>Nova coleção</h1>
+                    <h3 className='subHeadLineDestaque'>Urban Style</h3>
+                    <p className='descricaoDestaque'>Esteja pronta para o que for com a linha urban style de The Universe, versatilidade e práticidade você encontra aqui!</p>
+                    <BotaoAtrativo textoBotao='Urban Style' />
                 </div>
             </div>
             <div className='espacoSlideSimilares'>

@@ -11,7 +11,7 @@ const Slide = () => {
                 spaceBetween={0}
                 slidesPerView={1}
                 autoplay={{
-                    delay: 3000,
+                    delay: 10000,
                     disableOnInteraction: false
                 }}
                 grabCursor={true}
@@ -34,9 +34,9 @@ const Slide = () => {
                 modules={[Autoplay, EffectCreative]}
                 className='slide'
             >
-                <SwiperSlide><h1 style={{ backgroundColor: 'blue', width: '100%', height: '100%', margin:'0' }}>Teste1</h1></SwiperSlide>
-                <SwiperSlide><h1 style={{ backgroundColor: 'red', width: '100%', height: '100%', margin:'0' }}>Teste2</h1></SwiperSlide>
-                <SwiperSlide><h1 style={{ backgroundColor: 'orange', width: '100%', height: '100%', margin:'0' }}>Teste3</h1></SwiperSlide>
+                <SwiperSlide><img src='creativeSlide/1.png' alt='imagem destaque' style={{ width: '100%', height: '100%', margin:'0',   objectFit: "cover" }} /></SwiperSlide>
+                <SwiperSlide><img src='creativeSlide/2.png' alt='imagem destaque' style={{ width: '100%', height: '100%', margin:'0',   objectFit: "cover" }} /></SwiperSlide>
+                <SwiperSlide><img src='creativeSlide/3.png' alt='imagem destaque' style={{ width: '100%', height: '100%', margin:'0',   objectFit: "cover" }} /></SwiperSlide>
             </Swiper>
         </div>
     );

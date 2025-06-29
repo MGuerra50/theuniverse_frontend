@@ -4,12 +4,20 @@ import 'swiper/css';
 import { Pagination } from 'swiper/modules';
 import ModeloCard from '../modeloCard/modeloCard';
 
+type Card = {
+        textoDescricao: string,
+        src: string,
+        alt: string,
+        link: string
+    };
+
 type Props = {
     espacoEntreCards: undefined | null | number;
     quantidadeCardsNaTela: undefined | null | number;
     loop: boolean | null;
+    listaDeCards?: Card[];
 }
-const Carrossel = ({ espacoEntreCards, quantidadeCardsNaTela, loop }: Props) => {
+const Carrossel = ({ espacoEntreCards, quantidadeCardsNaTela, loop, listaDeCards }: Props) => {
 
     const cards = [
         {
@@ -56,7 +64,8 @@ const Carrossel = ({ espacoEntreCards, quantidadeCardsNaTela, loop }: Props) => 
     ];
 
     const gerandoCards = () => {
-        return cards.map((cardAtual, index) => (
+        const lista = listaDeCards != null && listaDeCards.length > 0 ? listaDeCards : cards;
+        return lista.map((cardAtual, index) => (
             <SwiperSlide key={`${index}`}>
                 <ModeloCard textoDescricao={cardAtual.textoDescricao} link={cardAtual.link}>
                     <img

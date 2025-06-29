@@ -3,6 +3,24 @@ import Tilt from 'react-parallax-tilt';
 import { FaSquarePlus, FaSquareMinus } from "react-icons/fa6";
 import { useEffect, useState } from 'react';
 
+type Card = {
+    textoDescricao: string,
+    src: string,
+    alt: string,
+    link: string
+};
+
+type listaDeCards = Card[];
+
+
+const teste = {
+    textoDescricao: 'teste',
+    src: 'teste',
+    alt: 'teste',
+    link: 'teste'
+};
+
+
 const CarrinhoDeCompras = () => {
     const precoItem = 75.77;
     const [quantidadeItem, setQuantidadeItem] = useState(1);
@@ -11,7 +29,7 @@ const CarrinhoDeCompras = () => {
         setValor(precoItem * quantidadeItem);
     }, [quantidadeItem]);
 
-    const formandoListaCarrinho = () => {
+    const formandoListaCarrinho = (elementoCarrinho:Card) => {
         return (
             <>
                 <div className='espacoDoItemDoCarrinho'>
@@ -51,16 +69,18 @@ const CarrinhoDeCompras = () => {
             </>
         );
     };
+
+    const formandoListagemItensDoCarrinho = (lista: listaDeCards) => {
+        lista.map(element => (<>
+            <div className='baseCarrinhoLateral'>
+                {formandoListaCarrinho(element)}
+            </div>
+        </>));
+    }
+
     return (
         <div className='baseCarrinhoLateral'>
-            {formandoListaCarrinho()}
-            {formandoListaCarrinho()}
-            {formandoListaCarrinho()}
-            {formandoListaCarrinho()}
-            {formandoListaCarrinho()}
-            {formandoListaCarrinho()}
-            {formandoListaCarrinho()}
-            {formandoListaCarrinho()}
+            {formandoListaCarrinho(teste)}
         </div>
     );
 };
